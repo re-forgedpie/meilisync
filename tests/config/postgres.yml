@@ -1,0 +1,17 @@
+debug: true
+progress:
+  type: file
+  path: postgres.json
+source:
+  type: postgres
+  host: localhost
+  port: 5432
+  user: postgres
+  password: postgres
+  database: test
+meilisearch:
+  api_url: http://localhost:7700
+sync:
+  - table: test
+    index: postgres
+    full: false

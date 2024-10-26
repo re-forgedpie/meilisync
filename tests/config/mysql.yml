@@ -1,0 +1,17 @@
+debug: true
+progress:
+  type: file
+  path: mysql.json
+source:
+  type: mysql
+  host: localhost
+  port: 3306
+  user: root
+  password: "123456"
+  database: test
+meilisearch:
+  api_url: http://localhost:7700
+sync:
+  - table: test
+    index: mysql
+    full: false
